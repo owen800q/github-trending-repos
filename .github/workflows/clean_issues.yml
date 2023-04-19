@@ -1,0 +1,31 @@
+name: Clean issues
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'
+jobs:
+  update-daily-github-trending:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+    - name: Install npm packages
+      run: npm install
+    - name: Set environment variables
+      run: |
+       echo "TRENDING_LABEL=trending-daily" >> $GITHUB_ENV
+       echo "TRENDING_NOT_DRY_RUN=true" >> $GITHUB_ENV
+       echo "TRENDING_TOKEN_BOT=${{ secrets.TRENDING_TOKEN_BOT }}" >> $GITHUB_ENV
+    - name: Clean daily issues
+      run: node ./scripts/clean-issues.js
+    - name: Set environment variables
+      run: |
+       echo "TRENDING_LABEL=trending-weekly" >> $GITHUB_ENV
+       echo "TRENDING_NOT_DRY_RUN=true" >> $GITHUB_ENV
+       echo "TRENDING_TOKEN_BOT=${{ secrets.TRENDING_TOKEN_BOT }}" >> $GITHUB_ENV
+    - name: Clean weekly issues
+      run: node ./scripts/clean-issues.js
