@@ -1,0 +1,14 @@
+name: XCTF daily sign
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      run: |
+        response=$(curl --location --request GET 'https://api.example.com' --header 'Authorization: Bearer ${{ secrets.API_TOKEN }}')
+        echo "Response: $response"
