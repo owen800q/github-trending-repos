@@ -10,26 +10,5 @@ jobs:
     steps:
     - name: curl
       run: |
-        curl 'https://adworld.xctf.org.cn/api/user_center/daily/checkin/create/' \
-        -X 'POST' \
-        -H 'Accept: application/json, text/plain, */*' \
-        -H 'Accept-Language: zh-CN' \
-        -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NzQ4Mzc1LCJqdGkiOiJkZjFjMjM1ODJmNmY0YzcwYTcyYTg1OWYwMzc2ZjgyMCIsInVzZXJfaWQiOjIzNjMzNn0.QfhO5eWEQpIo1lMFCDTUD9woTpcCICfqEcEfGoLRo30' \
-        -H 'Cache-Control: no-cache' \
-        -H 'Connection: keep-alive' \
-        -H 'Content-Length: 0' \
-        -H 'Cookie: cngizm2ziytq3mwy=m36mQQPkaFDlWznYWTjfV22DXWXSC2eDXXuZFC7JRS2dTHaTbQ==; front_refresh=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MzgzNDgzNSwianRpIjoiMjhkNDUyYjc2ODhkNGI4Y2FhOGFlODUzY2YyNDVmYTgiLCJ1c2VyX2lkIjoyMzYzMzZ9.x60os8x8ejYQ3qWcafhyIFPwUDSyPLK6pPNhfqzqnmM; fogq4n2exnzc0otg=BgIIPQRVUlxZVl1YW1VGH0ZNQRdJGxlOER0ZQhhLLyR3LCJyUw==' \
-        -H 'Origin: https://adworld.xctf.org.cn' \
-        -H 'Pragma: no-cache' \
-        -H 'Sec-Fetch-Dest: empty' \
-        -H 'Sec-Fetch-Mode: cors' \
-        -H 'Sec-Fetch-Site: same-origin' \
-        -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36' \
-        -H 'en2uwnjgxodjhogi: 1' \
-        -H 'rdmje1ymjkyzrknj: BwgHNx5HCRoJGRwGHyYFABRbTVY5EgkYFBtSUF8iMGJ0ZAoqJmoLG2ttbS4wPSQsNCQdOjI8NT10ZH0RMUtCSwMFBUVfTkJIdkdEDhcfAAkKUAEPBQpSDA0JBggAMjc9MmJuNzYzPjBjOzthaCQ+PDN6dnpse2hIcHoyJj+P2oONgISP3dyC0I+D3I/Ry8Scx5PKwcfEmJ6UxsyXyODg4qWssbClpae06/SmraGutvz8s6G+u66XtLCytJ+9183bg5yZ2Sk=' \
-        -H 'sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"' \
-        -H 'sec-ch-ua-mobile: ?0' \
-        -H 'sec-ch-ua-platform: "macOS"' \
-        -H 'xhnjc3odeyndrhmj: CgAIPz0jLSofFg8mGg0EHQoGNQ==' \
-        --compressed
-          ]
+        response=$(curl 'https://adworld.xctf.org.cn/api/user_center/daily/checkin/create/' -X 'POST' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: zh-CN' -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NzQ4Mzc1LCJqdGkiOiJkZjFjMjM1ODJmNmY0YzcwYTcyYTg1OWYwMzc2ZjgyMCIsInVzZXJfaWQiOjIzNjMzNn0.QfhO5eWEQpIo1lMFCDTUD9woTpcCICfqEcEfGoLRo30' -H 'Cache-Control: no-cache' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'Cookie: cngizm2ziytq3mwy=m36mQQPkaFDlWznYWTjfV22DXWXSC2eDXXuZFC7JRS2dTHaTbQ==; front_refresh=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MzgzNDgzNSwianRpIjoiMjhkNDUyYjc2ODhkNGI4Y2FhOGFlODUzY2YyNDVmYTgiLCJ1c2VyX2lkIjoyMzYzMzZ9.x60os8x8ejYQ3qWcafhyIFPwUDSyPLK6pPNhfqzqnmM; fogq4n2exnzc0otg=BgIIPQRVUlxZVl1YW1VGH0ZNQRdJGxlOER0ZQhhLLyR3LCJyUw==' -H 'Origin: https://adworld.xctf.org.cn' -H 'Pragma: no-cache' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-origin' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36' -H 'en2uwnjgxodjhogi: 1' -H 'rdmje1ymjkyzrknj: BwgHNx5HCRoJGRwGHyYFABRbTVY5EgkYFBtSUF8iMGJ0ZAoqJmoLG2ttbS4wPSQsNCQdOjI8NT10ZH0RMUtCSwMFBUVfTkJIdkdEDhcfAAkKUAEPBQpSDA0JBggAMjc9MmJuNzYzPjBjOzthaCQ+PDN6dnpse2hIcHoyJj+P2oONgISP3dyC0I+D3I/Ry8Scx5PKwcfEmJ6UxsyXyODg4qWssbClpae06/SmraGutvz8s6G+u66XtLCytJ+9183bg5yZ2Sk=' -H 'sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"' -H 'sec-ch-ua-mobile: ?0' -H 'sec-ch-ua-platform: "macOS"' -H 'xhnjc3odeyndrhmj: CgAIPz0jLSofFg8mGg0EHQoGNQ==' --compressed)
+        echo "Response: $response"
