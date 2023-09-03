@@ -31,3 +31,5 @@ jobs:
           -H 'sec-ch-ua-mobile: ?0' \
           -H 'sec-ch-ua-platform: "macOS"' \
           -H 'xhnjc3odeyndrhmj: CgA```
+          echo "Response: $response"
+          ]
